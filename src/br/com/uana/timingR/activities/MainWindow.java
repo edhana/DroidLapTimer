@@ -20,7 +20,6 @@ public class MainWindow extends TabActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        
         Resources resources = getResources(); // Get Drawables of the resource obj.
         TabHost tabHost = getTabHost(); // Activity tabhost
         TabHost.TabSpec tabSpec; // Reusable tableSpec
