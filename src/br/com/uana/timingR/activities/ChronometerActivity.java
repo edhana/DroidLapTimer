@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class ChronometerActivity extends Activity {
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

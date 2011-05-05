@@ -23,10 +23,33 @@ public class MainWindow extends TabActivity {
         Resources resources = getResources(); // Get Drawables of the resource obj.
         TabHost tabHost = getTabHost(); // Activity tabhost
         TabHost.TabSpec tabSpec; // Reusable tableSpec
-        Intent intent;
+        Intent intent; // Reusable intent for each tab
         
-        // Setup and add each tab to tabhost
+        // Setup and add each tab to tabhost ( initializin a tab spec )
+        // Chronometer
+        intent = new Intent().setClass(this, ChronometerActivity.class);
+        tabSpec = tabHost.newTabSpec("cronômetro").setIndicator("Cronômetro",
+        		resources.getDrawable(R.drawable.ic_tab_chronometer)).setContent(intent);
+        tabHost.addTab(tabSpec);
         
+        // Session
+        intent = new Intent().setClass(this, SessionActivity.class);
+        tabSpec = tabHost.newTabSpec("sessão").setIndicator("Sessão", 
+        		resources.getDrawable(R.drawable.ic_tab_chronometer)).setContent(intent);
+        tabHost.addTab(tabSpec);
         
+        // Event
+        intent = new Intent().setClass(this, EventActivity.class);
+        tabSpec = tabHost.newTabSpec("evento").setIndicator("Evento", 
+        		resources.getDrawable(R.drawable.ic_tab_chronometer)).setContent(intent);
+        tabHost.addTab(tabSpec);        
+        
+        //Setup
+        intent = new Intent().setClass(this, SetupActivity.class);
+        tabSpec = tabHost.newTabSpec("configuração.").setIndicator("Configuração", 
+        		resources.getDrawable(R.drawable.ic_tab_chronometer)).setContent(intent);
+        tabHost.addTab(tabSpec);           
+        
+        tabHost.setCurrentTab(0);
     }
 }

@@ -2,4 +2,8 @@
 <resources>
     <string name="hello">Hello World, MainWindow!</string>
     <string name="app_name">timingR</string>
+    <string name="chronometer_high">Chronometro</string>
+    <string name="sessions_high">Sessions</string>
+    <string name="events_high">Eventos</string>
+    <string name="setup_high">Configurações</string>
 </resources>
