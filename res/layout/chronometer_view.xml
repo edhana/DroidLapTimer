@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent" android:layout_height="fill_parent"
-	android:orientation="horizontal">
+	android:orientation="vertical">
 
-	<TableRow android:layout_width="wrap_content" android:id="@+id/tableRow1"
-		android:layout_height="fill_parent"></TableRow>
+	<LinearLayout android:layout_height="120dp"
+		android:id="@+id/linearLayoutTime" android:layout_width="fill_parent"
+		android:background="#580100" android:layout_marginTop="10dp"
+		android:orientation="horizontal" android:paddingRight="20dp">
+		
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/labelSpeed"
+			android:text="@string/initialTime" android:layout_marginLeft="20dp"
+			android:textSize="72sp" android:textStyle="bold" android:textColor="#FFFFFF"
+			android:typeface="normal" android:layout_gravity="center"/>
+	</LinearLayout>
+	
+	<LinearLayout android:layout_height="120dp"
+		android:id="@+id/linearLayoutSpeed" android:layout_width="fill_parent"
+		android:background="#0E2275" android:layout_marginTop="10dp"
+		android:orientation="horizontal">
+
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/labelSpeed"
+			android:text="@string/initialSpeed" android:layout_marginLeft="20dp"
+			android:textSize="110sp" android:textStyle="bold" android:textColor="#FFFFFF"
+			android:typeface="sans"/>
+
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/labelSpeed"
+			android:text="@string/kilometersPerHour"
+			android:textSize="16sp" android:textStyle="bold"
+			android:textColor="#FFFFFF"/>			
+
+	</LinearLayout>
+	
+	<!--  Configure the Lapcounter layout with opacity in 56% -->
+	<LinearLayout android:layout_height="120dp"
+		android:id="@+id/linearLayoutLapCounter" android:layout_width="fill_parent"
+		android:background="#5696C120" android:layout_marginTop="10dp"
+		android:orientation="vertical">
+		
+
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/labelLapCount"
+			android:text="@string/lapsTitle"
+			android:textSize="16sp" android:textStyle="bold"
+			android:textColor="#FFFFFF" android:gravity="top"/>			
+			
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/labelSpeed"
+			android:text="@string/initialLapCounter" android:layout_marginLeft="20dp"
+			android:textSize="90sp" android:textStyle="bold" android:textColor="#FFFFFF"
+			android:typeface="sans"/>
+	</LinearLayout>
 
 </LinearLayout>

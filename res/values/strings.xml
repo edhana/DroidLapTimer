@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="hello">Hello World, MainWindow!</string>
     <string name="app_name">timingR</string>
@@ -6,4 +6,10 @@
     <string name="sessions_high">Sessions</string>
     <string name="events_high">Eventos</string>
     <string name="setup_high">Configurações</string>
+    <string name="initialSpeed">000</string>
+    <string name="kilometersPerHour">km/h</string>
+    <string name="milesPerHour">mph</string>
+    <string name="initialTime">00:00:00</string>
+    <string name="initialLapCounter">0</string>
+    <string name="lapsTitle">Voltas</string>
 </resources>
