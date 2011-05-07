@@ -10,8 +10,6 @@ public class ChronometerActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-//		TextView textView = new TextView(this);
-//		textView.setText("This is the CHRONOMETER tab");
 		setContentView(R.layout.chronometer_view);
 	}
 }

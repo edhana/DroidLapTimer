@@ -1,57 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent" android:layout_height="fill_parent"
-	android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
 
-	<LinearLayout android:layout_height="120dp"
+	<!-- Time -->
+	<LinearLayout android:layout_height="117dp"
 		android:id="@+id/linearLayoutTime" android:layout_width="fill_parent"
-		android:background="#580100" android:layout_marginTop="10dp"
-		android:orientation="horizontal" android:paddingRight="20dp">
-		
+		android:background="#580100" android:layout_marginTop="20dp"
+		android:orientation="horizontal" android:paddingRight="20dp" android:layout_alignParentTop="true">
+
 		<TextView android:layout_height="wrap_content"
 			android:layout_width="wrap_content" android:id="@+id/labelSpeed"
 			android:text="@string/initialTime" android:layout_marginLeft="20dp"
-			android:textSize="72sp" android:textStyle="bold" android:textColor="#FFFFFF"
-			android:typeface="normal" android:layout_gravity="center"/>
+			android:textStyle="bold" android:textColor="#FFFFFF"
+			android:typeface="normal" android:layout_gravity="center" android:textSize="82sp"/>
 	</LinearLayout>
-	
-	<LinearLayout android:layout_height="120dp"
+
+	<!-- Speed -->
+	<LinearLayout android:layout_height="147dp"
 		android:id="@+id/linearLayoutSpeed" android:layout_width="fill_parent"
-		android:background="#0E2275" android:layout_marginTop="10dp"
-		android:orientation="horizontal">
+		android:background="#0E2275" android:orientation="horizontal" 
+		android:paddingBottom="15dp" android:layout_below="@+id/linearLayoutTime" android:layout_marginTop="20dp">
+		
+		<TextView android:layout_marginLeft="20dp" android:text="@string/initialSpeed"
+			android:textStyle="bold" android:layout_width="wrap_content"
+			android:id="@+id/labelSpeed" android:textSize="110sp"
+			android:typeface="sans" android:textColor="#FFFFFF"
+			android:layout_height="wrap_content" android:layout_gravity="center"></TextView>
 
 		<TextView android:layout_height="wrap_content"
 			android:layout_width="wrap_content" android:id="@+id/labelSpeed"
-			android:text="@string/initialSpeed" android:layout_marginLeft="20dp"
-			android:textSize="110sp" android:textStyle="bold" android:textColor="#FFFFFF"
-			android:typeface="sans"/>
-
-		<TextView android:layout_height="wrap_content"
-			android:layout_width="wrap_content" android:id="@+id/labelSpeed"
-			android:text="@string/kilometersPerHour"
-			android:textSize="16sp" android:textStyle="bold"
-			android:textColor="#FFFFFF"/>			
+			android:text="@string/kilometersPerHour" android:textSize="16sp"
+			android:textStyle="bold" android:textColor="#FFFFFF" android:layout_gravity="center|bottom"/>
 
 	</LinearLayout>
-	
-	<!--  Configure the Lapcounter layout with opacity in 56% -->
-	<LinearLayout android:layout_height="120dp"
+
+	<!-- Configure the Lapcounter layout with opacity in 56% -->
+	<LinearLayout android:layout_height="wrap_content"
 		android:id="@+id/linearLayoutLapCounter" android:layout_width="fill_parent"
-		android:background="#5696C120" android:layout_marginTop="10dp"
-		android:orientation="vertical">
-		
+		android:background="#5696C120"
+		android:orientation="horizontal" android:layout_below="@+id/linearLayoutSpeed" android:layout_marginTop="20dp">
+
 
 		<TextView android:layout_height="wrap_content"
 			android:layout_width="wrap_content" android:id="@+id/labelLapCount"
-			android:text="@string/lapsTitle"
-			android:textSize="16sp" android:textStyle="bold"
-			android:textColor="#FFFFFF" android:gravity="top"/>			
-			
+			android:text="@string/lapsTitle" android:textSize="16sp"
+			android:textStyle="bold" android:textColor="#FFFFFF" android:gravity="top" 
+			android:layout_marginLeft="20dp" android:paddingTop="10dp"
+			android:layout_gravity="center_horizontal"/>
+
 		<TextView android:layout_height="wrap_content"
 			android:layout_width="wrap_content" android:id="@+id/labelSpeed"
 			android:text="@string/initialLapCounter" android:layout_marginLeft="20dp"
-			android:textSize="90sp" android:textStyle="bold" android:textColor="#FFFFFF"
-			android:typeface="sans"/>
+			android:textSize="110sp" android:textStyle="bold" android:textColor="#FFFFFF"
+			android:typeface="sans" android:layout_gravity="fill_horizontal|center_horizontal"/>
 	</LinearLayout>
 
-</LinearLayout>
+	<!-- Button bar with options for the chronometer -->
+	<LinearLayout android:id="@+id/footer"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:orientation="horizontal" android:layout_alignParentBottom="true"
+		style="@android:style/ButtonBar">
+
+		<Button android:id="@+id/saveButton" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/buttonStartSession" />
+
+		<Button android:id="@+id/cancelButton" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/buttonEndSession" />
+	</LinearLayout>
+
+</RelativeLayout>
