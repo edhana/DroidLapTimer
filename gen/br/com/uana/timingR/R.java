@@ -20,12 +20,15 @@ public final class R {
         public static final int ic_tab_session=0x7f020006;
         public static final int ic_tab_setup=0x7f020007;
         public static final int icon=0x7f020008;
-        public static final int race_flag=0x7f020009;
-        public static final int session=0x7f02000a;
+        public static final int message_box_shape=0x7f020009;
+        public static final int race_flag=0x7f02000a;
+        public static final int session=0x7f02000b;
     }
     public static final class id {
         public static final int cancelButton=0x7f050007;
         public static final int footer=0x7f050005;
+        public static final int gpsButton=0x7f050009;
+        public static final int gpsMessageLabel=0x7f050008;
         public static final int labelLapCount=0x7f050004;
         public static final int labelSpeed=0x7f050001;
         public static final int linearLayoutLapCounter=0x7f050003;
@@ -41,9 +44,11 @@ public final class R {
     public static final class string {
         public static final int app_name=0x7f040001;
         public static final int buttonEndSession=0x7f04000d;
+        public static final int buttonGpsTurnOn=0x7f04000f;
         public static final int buttonStartSession=0x7f04000c;
         public static final int chronometer_high=0x7f040002;
         public static final int events_high=0x7f040004;
+        public static final int gpsStateInactive=0x7f04000e;
         public static final int hello=0x7f040000;
         public static final int initialLapCounter=0x7f04000a;
         public static final int initialSpeed=0x7f040006;

@@ -70,4 +70,30 @@
 			android:text="@string/buttonEndSession" />
 	</LinearLayout>
 
+
+	<!-- Frame wich overlaps the other elements to send a message -->
+	<LinearLayout android:orientation="vertical"
+		android:layout_alignParentTop="true" android:background="#80000000"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:visibility="visible" android:gravity="center_vertical|center_horizontal">
+
+		<!-- This is a message box -->
+		<LinearLayout android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:background="@drawable/message_box_shape"
+			android:gravity="center_horizontal|center_vertical"
+			android:orientation="vertical">
+			
+			<TextView android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:id="@+id/gpsMessageLabel"
+				android:text="@string/gpsStateInactive" android:textSize="16sp" android:textStyle="bold"
+				android:textColor="#FFFFFF" android:paddingTop="10dp" />
+				
+			<Button android:id="@+id/gpsButton" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_weight="1"
+				android:text="@string/buttonGpsTurnOn" android:layout_marginTop="10dp"/>
+		</LinearLayout>
+
+	</LinearLayout>
+	
+
 </RelativeLayout>

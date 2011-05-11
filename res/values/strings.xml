@@ -14,4 +14,6 @@
     <string name="lapsTitle">Voltas</string>
     <string name="buttonStartSession">Iniciar Sessão</string>
     <string name="buttonEndSession">Encerrar Sessão</string>
+    <string name="gpsStateInactive">Estado do GPS: inativo</string>
+    <string name="buttonGpsTurnOn">Habilitar Sinal do GPS</string>
 </resources>
