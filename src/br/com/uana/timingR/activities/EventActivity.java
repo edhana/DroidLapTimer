@@ -10,7 +10,7 @@ public class EventActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		
 		TextView textView = new TextView(this);
-		textView.setText("This is the EVENT tab");
+		textView.setText("This is the EVENT tab: Orientation - " + getRequestedOrientation());
 		setContentView(textView);
 	}
 }
