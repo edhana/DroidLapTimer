@@ -24,13 +24,6 @@ public final class R {
         public static final int race_flag=0x7f02000a;
         public static final int session=0x7f02000b;
     }
-    public static final class id {
-        public static final int labelLapCount=0x7f050004;
-        public static final int labelSpeed=0x7f050001;
-        public static final int linearLayoutLapCounter=0x7f050003;
-        public static final int linearLayoutSpeed=0x7f050002;
-        public static final int linearLayoutTime=0x7f050000;
-    }
     public static final class layout {
         public static final int chronometer_view=0x7f030000;
         public static final int main=0x7f030001;
