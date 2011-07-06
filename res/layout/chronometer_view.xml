@@ -1,52 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_height="wrap_content" android:layout_width="wrap_content">
+	android:layout_height="fill_parent" android:layout_width="fill_parent"
+	android:paddingTop="10dp"
+	android:padding="10dp">
 
-	<!-- Time -->
-
-	<!-- Speed -->
-
-	<!-- Configure the Lapcounter layout with opacity in 56% -->
-
-	<!-- Button bar with options for the chronometer -->
-<!-- 	<LinearLayout android:id="@+id/footer"
-		android:layout_width="fill_parent" android:layout_height="wrap_content"
-		android:orientation="horizontal" android:layout_alignParentBottom="true"
-		style="@android:style/ButtonBar">
-
-		<Button android:id="@+id/saveButton" android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:layout_weight="1"
-			android:text="@string/buttonStartSession" />
-
-		<Button android:id="@+id/cancelButton" android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:layout_weight="1"
-			android:text="@string/buttonEndSession" />
-	</LinearLayout> -->
-
-
-	<!-- Frame wich overlaps the other elements to send a message -->
-<!-- 	<LinearLayout android:orientation="vertical"
-		android:layout_alignParentTop="true" android:background="#80000000"
-		android:layout_width="fill_parent" android:layout_height="fill_parent"
-		android:visibility="invisible" android:gravity="center_vertical|center_horizontal">
-
-		This is a message box
-		<LinearLayout android:layout_height="wrap_content"
-			android:layout_width="wrap_content" android:background="@drawable/message_box_shape"
-			android:gravity="center_horizontal|center_vertical"
-			android:orientation="vertical">
-			
-			<TextView android:layout_height="wrap_content"
-				android:layout_width="wrap_content" android:id="@+id/gpsMessageLabel"
-				android:text="@string/gpsStateInactive" android:textSize="16sp" android:textStyle="bold"
-				android:textColor="#FFFFFF" android:paddingTop="10dp" />
-				
-			<Button android:id="@+id/gpsButton" android:layout_width="wrap_content"
-				android:layout_height="wrap_content" android:layout_weight="1"
-				android:text="@string/buttonGpsTurnOn" android:layout_marginTop="10dp"/>
-		</LinearLayout>
-
-	</LinearLayout> -->
+    <LinearLayout android:layout_alignParentTop="true" 
+    	android:id="@+id/linearLayout1" android:layout_height="wrap_content" 
+    	android:layout_width="fill_parent"
+    	android:layout_height="100dp"
+    	android:orientation="vertical">
+        
+        <LinearLayout android:layout_alignParentTop="true" 
+	    	android:id="@+id/linearLayout1" android:layout_height="wrap_content" 
+	    	android:layout_width="wrap_content"
+	    	android:orientation="horizontal">
+	    	
+        	<TextView android:text="Sessao: " android:id="@+id/textView1" 
+        		android:layout_width="wrap_content" 
+        		android:layout_height="wrap_content"></TextView>
+        	
+        	<TextView android:text="1" android:id="@+id/textView2" 
+        		android:layout_width="wrap_content" 
+        		android:layout_height="wrap_content">
+        	</TextView>
+    		
+    	</LinearLayout>
+    	
+        <LinearLayout android:layout_alignParentTop="true" 
+	    	android:id="@+id/linearLayout1" android:layout_height="wrap_content" 
+	    	android:layout_width="fill_parent"
+	    	android:orientation="vertical"
+	    	android:gravity="center_vertical|center_horizontal">
+	    	
+			<LinearLayout android:layout_alignParentTop="true" 
+		    	android:id="@+id/linearLayout1" android:layout_height="wrap_content" 
+		    	android:layout_width="wrap_content"
+		    	android:orientation="horizontal">
+	    	
+			<Button android:id="@+id/button1" 
+		    	android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content" android:text="@string/start" ></Button>
 	
-
+			<Button android:id="@+id/button2" 
+		    	android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content" android:text="@string/stop"></Button>
+		</LinearLayout>	        
+    		
+    	</LinearLayout>    	
+    	
+    	
+    </LinearLayout>
 </RelativeLayout>
