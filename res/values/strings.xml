@@ -16,6 +16,7 @@
     <string name="buttonEndSession">Encerrar Sessão</string>
     <string name="gpsStateInactive">Estado do GPS: inativo</string>
     <string name="buttonGpsTurnOn">Habilitar Sinal do GPS</string>
-    <string name="start">Iniciar</string>
+    <string name="start">Iniciar Sessão</string>
     <string name="stop">Parar</string>
+	<string name="looking_for_gps">Procurando GPS...</string>    
 </resources>

@@ -9,32 +9,37 @@ import android.content.Intent;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import br.com.uana.timingR.R;
+import br.com.uana.timingR.services.LocationService;
 
 public class ChronometerActivity extends Activity {
-	private LocationManager manager;
-	private boolean isGpsEnabled= false;
-	
-	private void verifyGps(){
-		if ( !manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) )
-	        buildAlertMessageNoGps();
-		
-		isGpsEnabled = manager.isProviderEnabled( LocationManager.GPS_PROVIDER );
-	}
-	
+	private static final String TAG = ChronometerActivity.class.getName();
+	private LocationManager locationManager;
+	private LocationService locationService;
+	private Thread locationThread = null;
+	private int sessionCounter = 0;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.chronometer_view);
+
+		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		locationService = new LocationService(locationManager);
 		
-		manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
-		if(!isGpsEnabled){
-			final Button startButton = (Button) findViewById(R.id.button1);
-			startButton.setText("Procurando GPS...");
-		}
+		final Activity self = this;
 		
-		verifyGps();
+		// Adicionando os listener de eventos aos botoes
+		final Button startButton = (Button) findViewById(R.id.button1);
+		startButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {	
+				launchGpsAcquireThread();
+			}
+		});
 	}
 	
 	private void buildAlertMessageNoGps() {
@@ -70,21 +75,35 @@ public class ChronometerActivity extends Activity {
 		super.onPause();
 	}
 
-
 	@Override
 	protected void onResume() {
 		super.onResume();
 		
-//		if ( !manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
-//	        buildAlertMessageNoGps();
-//	    }
-		
-		if(!isGpsEnabled){
+		if(!locationService.isGpsEnabled()){
 			final Button startButton = (Button) findViewById(R.id.button1);
-			startButton.setText("Procurando GPS...");
+			startButton.setText("Ativar GPS");
+			
+			startButton.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {	
+					launchGPSOptions();
+				}
+			});
+		}else {
+			launchGpsAcquireThread();
 		}
-		
-		verifyGps();		
+	}
+	
+	
+	private void launchGpsAcquireThread(){
+		locationThread = new Thread(locationService);
+		locationThread.start();
+		incrementSessionCounter();
+	}
+	
+	public void incrementSessionCounter(){
+		final TextView labelSessionCounter = (TextView) findViewById(R.id.labelSessionCounter);
+		sessionCounter += 1;
+		labelSessionCounter.setText("" + sessionCounter);
 	}
 	
 	
