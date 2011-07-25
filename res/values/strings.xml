@@ -18,5 +18,6 @@
     <string name="buttonGpsTurnOn">Habilitar Sinal do GPS</string>
     <string name="start">Iniciar Sessão</string>
     <string name="stop">Parar</string>
-	<string name="looking_for_gps">Procurando GPS...</string>    
+	<string name="looking_for_gps">Procurando GPS...</string>
+	<string name="getting_points">Recebendo Pontos</string>    
 </resources>

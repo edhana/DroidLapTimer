@@ -18,8 +18,8 @@
         <activity android:name=".activities.ChronometerActivity" android:label="@string/chronometer_high"></activity>
         <activity android:name=".activities.SessionActivity" android:label="@string/sessions_high"></activity>
         <activity android:name=".activities.EventActivity" android:label="@string/events_high"></activity>
-        <activity android:name=".activities.SetupActivity" android:label="@string/setup_high"></activity>
-        <service android:name=".services.LocationService"></service>
+        <activity android:name="activities.SetupActivity" android:label="@string/setup_high"></activity>
+        <service android:name="services.LocationService"></service>
 
     </application>
 </manifest>

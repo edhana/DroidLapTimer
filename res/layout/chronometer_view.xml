@@ -1,52 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_height="fill_parent" android:layout_width="fill_parent"
-	android:paddingTop="10dp"
-	android:padding="10dp">
+	android:paddingTop="10dp" android:padding="10dp">
 
-    <LinearLayout android:layout_alignParentTop="true" 
-    	android:id="@+id/linearLayout1" 
-    	android:layout_width="fill_parent"
-    	android:layout_height="100dp"
-    	android:orientation="vertical">
-        
-        <LinearLayout android:layout_alignParentTop="true" 
-	    	android:id="@+id/linearLayout1" android:layout_height="wrap_content" 
-	    	android:layout_width="wrap_content"
-	    	android:orientation="horizontal">
-	    	
-        	<TextView android:text="Sessao: " android:id="@+id/textView1" 
-        		android:layout_width="wrap_content" 
-        		android:layout_height="wrap_content"></TextView>
-        	
-        	<TextView android:text="0" android:layout_width="wrap_content" 
-        		android:layout_height="wrap_content" android:id="@+id/labelSessionCounter">
-        	</TextView>
-    		
-    	</LinearLayout>
-    	
-        <LinearLayout android:layout_alignParentTop="true" 
-	    	android:id="@+id/linearLayout1" android:layout_height="wrap_content" 
-	    	android:layout_width="fill_parent"
-	    	android:orientation="vertical"
-	    	android:gravity="center_vertical|center_horizontal">
-	    	
-			<LinearLayout android:layout_alignParentTop="true" 
-		    	android:id="@+id/linearLayout1" android:layout_height="wrap_content" 
-		    	android:layout_width="wrap_content"
-		    	android:orientation="horizontal">
-	    	
-			<Button android:id="@+id/button1" 
-		    	android:layout_width="wrap_content" 
-		    	android:layout_height="wrap_content" android:text="@string/start" android:enabled="true"></Button>
-	
-			<Button android:id="@+id/button2" 
-		    	android:layout_width="wrap_content" 
-		    	android:layout_height="wrap_content" android:text="@string/stop"></Button>
-		</LinearLayout>	        
-    		
-    	</LinearLayout>    	
-    	
-    	
-    </LinearLayout>
+	<LinearLayout android:layout_alignParentTop="true"
+		android:id="@+id/linearLayout1" android:layout_width="fill_parent"
+		android:layout_height="100dp" android:orientation="vertical">
+
+		<!--  GPS Status -->
+		<LinearLayout android:layout_alignParentTop="true"
+			android:id="@+id/linearLayout1" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:orientation="horizontal">
+
+			<TextView android:text="GPS Status: " android:id="@+id/textView1"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+
+			<TextView android:text="OFFLINE" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/gpsStatusLabel">
+			</TextView>
+
+		</LinearLayout>
+
+		<!-- Session Count -->
+		<LinearLayout android:layout_alignParentTop="true"
+			android:id="@+id/linearLayout1" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:orientation="horizontal">
+
+			<TextView android:text="Sessao: " android:id="@+id/textView2"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+
+			<TextView android:text="0" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/labelSessionCounter">
+			</TextView>
+
+		</LinearLayout>
+		
+		<!-- Received Positions Count -->
+		<LinearLayout android:layout_alignParentTop="true"
+			android:id="@+id/linearLayout1" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:orientation="horizontal">
+
+			<TextView android:text="Sessao: " android:id="@+id/textView3"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+
+			<TextView android:text="0" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/locationCounterLabel">
+			</TextView>
+
+		</LinearLayout>		
+
+
+		<LinearLayout android:layout_alignParentTop="true"
+			android:id="@+id/linearLayout1" android:layout_height="wrap_content"
+			android:layout_width="fill_parent" android:orientation="vertical"
+			android:gravity="center_vertical|center_horizontal">
+
+			<LinearLayout android:layout_alignParentTop="true"
+				android:id="@+id/linearLayout1" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+
+				<Button android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="@string/start"
+					android:enabled="true" android:id="@+id/startB"></Button>
+
+				<Button android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="@string/stop"
+					android:id="@+id/stopButton"></Button>
+			</LinearLayout>
+
+		</LinearLayout>
+
+
+	</LinearLayout>
 </RelativeLayout>
