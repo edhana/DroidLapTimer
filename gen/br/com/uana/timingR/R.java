@@ -29,11 +29,11 @@ public final class R {
         public static final int labelSessionCounter=0x7f050004;
         public static final int linearLayout1=0x7f050000;
         public static final int locationCounterLabel=0x7f050006;
+        public static final int receivedPositionsCounterLabel=0x7f050005;
         public static final int startB=0x7f050007;
         public static final int stopButton=0x7f050008;
         public static final int textView1=0x7f050001;
         public static final int textView2=0x7f050003;
-        public static final int textView3=0x7f050005;
     }
     public static final class layout {
         public static final int chronometer_view=0x7f030000;
@@ -57,6 +57,7 @@ public final class R {
         public static final int lapsTitle=0x7f04000b;
         public static final int looking_for_gps=0x7f040012;
         public static final int milesPerHour=0x7f040008;
+        public static final int received_positions=0x7f040014;
         public static final int sessions_high=0x7f040003;
         public static final int setup_high=0x7f040005;
         public static final int start=0x7f040010;

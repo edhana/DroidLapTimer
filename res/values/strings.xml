@@ -19,5 +19,6 @@
     <string name="start">Iniciar Sessão</string>
     <string name="stop">Parar</string>
 	<string name="looking_for_gps">Procurando GPS...</string>
-	<string name="getting_points">Recebendo Pontos</string>    
+	<string name="getting_points">Recebendo Pontos</string>
+	<string name="received_positions">Pontos Recebidos: </string>    
 </resources>

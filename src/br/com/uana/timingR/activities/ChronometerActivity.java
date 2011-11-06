@@ -29,6 +29,7 @@ public class ChronometerActivity extends Activity implements LocationListener {
 	private Vector<Location> locations;
 	private boolean lapTimerStarted = false;
 	private Button startButton;
+	private TextView positionsCounterLabel;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class ChronometerActivity extends Activity implements LocationListener {
 		setContentView(R.layout.chronometer_view);
 		
 		startButton = (Button) findViewById(R.id.startB);
+		positionsCounterLabel = (TextView) findViewById(R.id.receivedPositionsCounterLabel);
 		
 		if(startButton == null){
 			buildAlertMessage("Botao e nulo!");
@@ -45,7 +47,7 @@ public class ChronometerActivity extends Activity implements LocationListener {
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 		
 		// Set status Listener
-		locationManager.addGpsStatusListener(new GpsStatusListener());
+		locationManager.addGpsStatusListener(new GpsStatusListener((TextView) findViewById(R.id.gpsStatusLabel)));
 		
 		if(isGpsEnabled()){
 			startButton.setOnClickListener(new View.OnClickListener() {
@@ -148,6 +150,7 @@ public class ChronometerActivity extends Activity implements LocationListener {
 	public void onLocationChanged(Location location) {
 		if(lapTimerStarted){
 			Log.i(TAG, "=======> Location Recebida: " + location.getLatitude() + ", " + location.getLongitude());
+			positionsCounterLabel.setText("" + (Integer.parseInt(positionsCounterLabel.getText() + "") + 1)); 
 			locations.add(location);
 		}
 	}

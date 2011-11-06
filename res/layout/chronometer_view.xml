@@ -40,8 +40,7 @@
 			android:id="@+id/linearLayout1" android:layout_height="wrap_content"
 			android:layout_width="wrap_content" android:orientation="horizontal">
 
-			<TextView android:text="Sessao: " android:id="@+id/textView3"
-				android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/received_positions" android:id="@+id/receivedPositionsCounterLabel"></TextView>
 
 			<TextView android:text="0" android:layout_width="wrap_content"
 				android:layout_height="wrap_content" android:id="@+id/locationCounterLabel">
@@ -53,7 +52,7 @@
 		<LinearLayout android:layout_alignParentTop="true"
 			android:id="@+id/linearLayout1" android:layout_height="wrap_content"
 			android:layout_width="fill_parent" android:orientation="vertical"
-			android:gravity="center_vertical|center_horizontal">
+			android:gravity="center_vertical|center_horizontal" android:layout_marginTop="10dp">
 
 			<LinearLayout android:layout_alignParentTop="true"
 				android:id="@+id/linearLayout1" android:layout_height="wrap_content"
